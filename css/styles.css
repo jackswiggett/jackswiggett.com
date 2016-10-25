@@ -1,0 +1,31 @@
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 4em;
+    margin: 50px 0px 10px;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 2.3em;
+    margin: 10px 0px;
+}
+
+hr {
+  margin: 0 auto;
+  padding: 0;
+  width: 500px;
+  max-width: 100%;
+  height: 1px;
+  border: none;
+  background-color: #15548e;
+}
+
+.center {
+  text-align: center;
+}
+
+.dark-blue {
+  color: #0d3051;
+}
