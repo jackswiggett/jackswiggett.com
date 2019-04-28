@@ -1,6 +1,6 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import React from 'react'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -12,6 +12,8 @@ import Img from "gatsby-image"
  * - `gatsby-image`: https://gatsby.dev/gatsby-image
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
+
+// tslint:disable:jsx-no-lambda
 
 const Image = () => (
   <StaticQuery
