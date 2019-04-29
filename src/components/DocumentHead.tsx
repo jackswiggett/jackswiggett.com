@@ -1,18 +1,24 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import { graphql, useStaticQuery } from 'gatsby'
-import PropTypes from 'prop-types'
 import React from 'react'
 import Helmet from 'react-helmet'
 
 // tslint:disable:object-literal-sort-keys
 
-function SEO({ description, lang, meta, keywords, title }) {
+interface IDocumentHeadProps {
+  description?: string
+  lang?: string
+  meta?: any[]
+  keywords?: string[]
+  title?: string
+}
+
+const DocumentHead = ({
+  description = '',
+  lang = 'en',
+  meta = [],
+  keywords = [],
+  title,
+}: IDocumentHeadProps) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,7 +26,6 @@ function SEO({ description, lang, meta, keywords, title }) {
           siteMetadata {
             title
             description
-            author
           }
         }
       }
@@ -34,8 +39,7 @@ function SEO({ description, lang, meta, keywords, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={title || site.siteMetadata.title}
       meta={[
         {
           name: `description`,
@@ -56,10 +60,6 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           name: `twitter:card`,
           content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
@@ -83,19 +83,4 @@ function SEO({ description, lang, meta, keywords, title }) {
   )
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  keywords: [],
-  description: ``,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
-}
-
-export default SEO
+export default DocumentHead

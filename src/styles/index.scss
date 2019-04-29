@@ -1,0 +1,48 @@
+@import 'variables';
+
+html {
+  box-sizing: border-box;
+  font-family: 'Muli', sans-serif;
+  color: white;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 20px;
+}
+
+.blue {
+  color: $color-dark-blue;
+}
