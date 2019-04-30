@@ -2,12 +2,11 @@
 
 .root {
   background-color: $color-light-blue;
-  width: 100%;
-  min-height: 100vh;
+}
+
+.inner {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 30px;
 }
 
 .profileImage {

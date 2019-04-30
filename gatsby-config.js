@@ -20,7 +20,7 @@ module.exports = {
         fonts: [
           {
             family: `Muli`,
-            variants: [`300`, `400`],
+            variants: [`200`, `300`],
           },
         ],
       },
