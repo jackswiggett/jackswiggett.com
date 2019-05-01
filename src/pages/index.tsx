@@ -13,7 +13,7 @@ import {
 
 const styles = require('./index.module.scss')
 
-const variables = require('../styles/_variables.scss')
+const variables = require('../styles/variables')
 const arivaleScreenshots = [1, 2, 3, 4, 5].map(num =>
   require(`../images/arivale_screen_${num}.png`)
 )

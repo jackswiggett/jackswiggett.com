@@ -7,10 +7,3 @@ $color-white-hover: darken($color-white, 20%);
 $color-dark-blue-hover: darken($color-dark-blue, 10%);
 
 $text-content-width: 775;
-
-:export {
-  colorWhite: $color-white;
-  colorLightBlue: $color-light-blue;
-  colorMediumBlue: $color-medium-blue;
-  colorDarkBlue: $color-dark-blue;
-}
