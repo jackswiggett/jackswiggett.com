@@ -44,7 +44,7 @@ export default class Landing extends PureComponent<ILandingProps> {
   private rootRef = React.createRef<HTMLDivElement>()
   private innerRef = React.createRef<HTMLDivElement>()
 
-  initScrollMagic() {
+  private initScrollMagic() {
     new ScrollMagic.Scene({
       duration: '100%',
       triggerElement: this.rootRef.current,

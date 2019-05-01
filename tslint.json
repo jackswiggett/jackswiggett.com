@@ -5,6 +5,7 @@
     "prettier": true,
     "no-var-requires": false,
     "no-submodule-imports": false,
-    "member-access": [true, "no-public"]
+    "member-access": [true, "no-public"],
+    "member-ordering": false
   }
 }
