@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import DocumentHead from '../components/common/DocumentHead'
 import InternshipsScreen from '../components/screens/Internships'
 import JobScreen from '../components/screens/Job'
@@ -11,6 +11,8 @@ import {
   LandingText,
 } from '../shared/content'
 
+const styles = require('./index.module.scss')
+
 const variables = require('../styles/_variables.scss')
 const arivaleScreenshots = [1, 2, 3, 4, 5].map(num =>
   require(`../images/arivale_screen_${num}.png`)
@@ -22,10 +24,10 @@ const kaimoWebScreenshots = [1, 2, 3, 4, 5].map(num =>
   require(`../images/kaimo_web_screen_${num}.png`)
 )
 
-export default class IndexPage extends Component {
+export default class IndexPage extends PureComponent {
   render() {
     return (
-      <div>
+      <div className={styles.root}>
         <DocumentHead />
         <LandingScreen {...LandingText} />
         <JobScreen
