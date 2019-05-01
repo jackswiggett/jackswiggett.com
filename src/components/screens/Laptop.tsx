@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import ScrollMagic from 'scrollmagic'
-import { controller } from '../util/scrollmagic'
-import Section from './Section'
+import { controller } from '../../shared/scrollmagic'
+import Section from '../common/Section'
 
 const styles = require('./Laptop.module.scss')
 
@@ -50,6 +50,7 @@ export default class Laptop extends PureComponent<ILaptopProps> {
         className={styles.root}
         style={{ marginBottom: ANIMATION_DURATION }}
         rootRef={this.rootRef}
+        unpinAfterDuration={ANIMATION_DURATION}
       >
         <div className={styles.laptopContainer}>{this.renderScreenshots()}</div>
       </Section>

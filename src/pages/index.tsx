@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
-import DocumentHead from '../components/DocumentHead'
-import Job from '../components/Job'
-import Landing from '../components/Landing'
-import Laptop from '../components/Laptop'
-import { ArivaleJobText, KaimoJobText, LandingText } from '../constants/content'
+import DocumentHead from '../components/common/DocumentHead'
+import InternshipsScreen from '../components/screens/Internships'
+import JobScreen from '../components/screens/Job'
+import LandingScreen from '../components/screens/Landing'
+import LaptopScreen from '../components/screens/Laptop'
+import {
+  ArivaleJobText,
+  InternshipsText,
+  KaimoJobText,
+  LandingText,
+} from '../shared/content'
 
 const variables = require('../styles/_variables.scss')
 const arivaleScreenshots = [1, 2, 3, 4, 5].map(num =>
@@ -21,19 +27,20 @@ export default class IndexPage extends Component {
     return (
       <div>
         <DocumentHead />
-        <Landing {...LandingText} />
-        <Job
+        <LandingScreen {...LandingText} />
+        <JobScreen
           {...ArivaleJobText}
           backgroundColor={variables.colorDarkBlue}
           screenshots={arivaleScreenshots}
         />
-        <Job
+        <JobScreen
           {...KaimoJobText}
           backgroundColor={variables.colorMediumBlue}
           screenshots={kaimoMobileScreenshots}
           flexReverse={true}
         />
-        <Laptop screenshots={kaimoWebScreenshots} />
+        <LaptopScreen screenshots={kaimoWebScreenshots} />
+        <InternshipsScreen internships={InternshipsText} />
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import DocumentHead from '../components/DocumentHead'
+import DocumentHead from '../components/common/DocumentHead'
 
 const NotFoundPage = () => (
   <div>

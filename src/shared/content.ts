@@ -1,3 +1,5 @@
+import { IInternship } from './types'
+
 export const LandingText = {
   subtitle: `Web & Mobile Engineer`,
   title: `Jack Swiggett`,
@@ -22,3 +24,30 @@ export const KaimoJobText = {
   ],
   title: `Technical Co-Founder at Kaimo`,
 }
+
+export const InternshipsText: IInternship[] = [
+  {
+    company: `Actively Learn`,
+    dateRange: `June - September 2017`,
+    description: `Worked on a small engineering team writing frontend and backend code that quickly went into production. Revamped key parts of the codebase and implemented new features using React, Backbone, Node, and other technologies.`,
+    role: `Software Engineering Intern`,
+  },
+  {
+    company: `INEVAL Environnement`,
+    dateRange: `April - July 2016`,
+    description: `Researched, designed and implemented a SCADA system for remote automation of an anaerobic digestion plant, used to produce energy from agricultural waste.`,
+    role: `Software Engineering Intern`,
+  },
+  {
+    company: `ISEP`,
+    dateRange: `January - June 2016`,
+    description: `Designed and implemented a coverage path planning algorithm and web platform to facilitate automated mission planning for autonomous agricultural drones.`,
+    role: `Computer Science Research Intern`,
+  },
+  {
+    company: `Synapse Product Development`,
+    dateRange: `June - September 2015`,
+    description: `Built data processing and test automation tools for cutting-edge consumer products. Helped build a tool to jumpstart embedded software development.`,
+    role: `Software Engineering Intern`,
+  },
+]

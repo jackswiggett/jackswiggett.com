@@ -1,8 +1,8 @@
 import { Linear, TweenLite } from 'gsap'
 import React, { PureComponent } from 'react'
 import ScrollMagic from 'scrollmagic'
-import { controller } from '../util/scrollmagic'
-import Section from './Section'
+import { controller } from '../../shared/scrollmagic'
+import Section from '../common/Section'
 
 const styles = require('./Job.module.scss')
 

@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react'
 import { FaGithubAlt, FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import ScrollMagic from 'scrollmagic'
-import { controller } from '../util/scrollmagic'
-import Section from './Section'
+import { controller } from '../../shared/scrollmagic'
+import Section from '../common/Section'
 
 const styles = require('./Landing.module.scss')
 

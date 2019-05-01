@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@import '../../styles/variables';
 
 .root {
   background: linear-gradient(
@@ -10,7 +10,7 @@
 .laptopContainer {
   width: 968px;
   height: 531px;
-  background-image: url('../images/laptop.svg');
+  background-image: url('../../images/laptop.svg');
   position: relative;
   background-size: contain;
   background-position: center;
