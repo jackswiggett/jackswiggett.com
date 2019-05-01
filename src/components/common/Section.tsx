@@ -17,6 +17,8 @@ export default class Section extends PureComponent<ISectionProps> {
     isPinned: true,
   }
 
+  private scrollMagicScene: any
+
   private rootRef = this.props.rootRef || React.createRef<HTMLDivElement>()
 
   private initScrollMagic() {
@@ -24,7 +26,7 @@ export default class Section extends PureComponent<ISectionProps> {
       return
     }
 
-    new ScrollMagic.Scene({
+    this.scrollMagicScene = new ScrollMagic.Scene({
       duration: this.props.unpinAfterDuration || 0,
       triggerElement: this.rootRef.current,
       triggerHook: 'onLeave',
@@ -33,8 +35,22 @@ export default class Section extends PureComponent<ISectionProps> {
       .addTo(controller)
   }
 
+  private onResize = () => {
+    // Handle window resizing correctly
+    // See https://github.com/janpaepke/ScrollMagic/issues/379
+    if (this.scrollMagicScene) {
+      this.scrollMagicScene.destroy(true)
+      this.initScrollMagic()
+    }
+  }
+
   componentDidMount() {
     this.initScrollMagic()
+    window.addEventListener('resize', this.onResize)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize)
   }
 
   render() {
