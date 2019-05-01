@@ -4,7 +4,7 @@ $screenshot-width: 290;
 $screenshot-height: 570;
 
 .title {
-  margin-bottom: 80px;
+  margin-bottom: 8rem;
 }
 
 .text {
@@ -60,5 +60,12 @@ $screenshot-height: 570;
 
   &.visible {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 800px), screen and (max-height: 600px) {
+  .screenshotsOuter,
+  .spacer {
+    display: none;
   }
 }

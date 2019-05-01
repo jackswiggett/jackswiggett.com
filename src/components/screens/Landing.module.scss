@@ -7,6 +7,7 @@
 .inner {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .profileImage {
@@ -37,5 +38,32 @@
 
   &:hover {
     color: $color-white-hover;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .inner {
+    flex-direction: column;
+  }
+
+  .titles {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-height: 600px), screen and (max-width: 450px) {
+  .profileImage {
+    width: 242px;
+    height: 276px;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-height: 480px) {
+  .profileImage {
+    width: 161px;
+    height: 184px;
+    padding-bottom: 14px;
   }
 }
