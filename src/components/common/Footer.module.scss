@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.root {
+  background-color: $color-medium-blue;
+  width: 100%;
+  padding: 80px 30px 30px;
+  text-align: center;
+
+  a {
+    color: inherit;
+  }
+}

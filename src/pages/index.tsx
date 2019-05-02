@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import DocumentHead from '../components/common/DocumentHead'
+import Footer from '../components/common/Footer'
 import EducationScreen from '../components/screens/Education'
 import InternshipsScreen from '../components/screens/Internships'
 import JobScreen from '../components/screens/Job'
@@ -49,6 +50,7 @@ export default class IndexPage extends PureComponent {
         <InternshipsScreen internships={InternshipsText} />
         <EducationScreen {...EducationText} />
         <ProjectsScreen projects={ProjectsText} />
+        <Footer />
       </div>
     )
   }
