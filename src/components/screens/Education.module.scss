@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+
+.root {
+  background-color: $color-medium-blue;
+
+  h4 {
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+.textContainer {
+  width: $text-content-width + 0px;
+  display: flex;
+  align-items: stretch;
+}
+
+.degreeContainer {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+}
+
+.concentration {
+  font-size: 2.4rem;
+  font-weight: 200;
+  margin: 3px 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.honorsContainer {
+  flex: 5;
+}
+
+.honor {
+  font-size: 2rem;
+  font-weight: 200;
+  margin: 5px 0;
+}
+
+@media only screen and (max-width: 850px) {
+  .root {
+    text-align: center;
+  }
+
+  .textContainer {
+    flex-direction: column;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .degreeContainer {
+    margin-bottom: 50px;
+  }
+}

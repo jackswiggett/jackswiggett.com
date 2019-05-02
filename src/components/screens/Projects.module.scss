@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+
+.root {
+  background-color: $color-medium-blue;
+
+  h4 {
+    text-transform: none;
+    margin-top: 1.5rem;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: $text-content-width + 0px;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-white-hover;
+  }
+}
+
+.shortDescription {
+  font-size: 1.8rem;
+}
+
+.chevron {
+  margin-left: 40px;
+  flex: none;
+}
+
+.technologies {
+  font-style: italic;
+}
+
+.linkSeperator {
+  margin: 0 8px;
+}
+
+.bullets {
+  font-size: 1.8rem;
+  text-align: left;
+  margin-top: 8rem;
+
+  li {
+    margin-bottom: 1rem;
+  }
+}

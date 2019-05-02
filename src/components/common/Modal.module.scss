@@ -10,7 +10,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: scroll;
   color: $color-dark-blue;
 }
 
@@ -26,6 +25,8 @@
 .content {
   text-align: center;
   max-width: $text-content-width + 0px;
+  max-height: 100vh;
+  overflow: scroll;
   margin: 30px;
   z-index: 1;
 }

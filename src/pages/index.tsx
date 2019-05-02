@@ -1,14 +1,18 @@
 import React, { PureComponent } from 'react'
 import DocumentHead from '../components/common/DocumentHead'
+import EducationScreen from '../components/screens/Education'
 import InternshipsScreen from '../components/screens/Internships'
 import JobScreen from '../components/screens/Job'
 import LandingScreen from '../components/screens/Landing'
 import LaptopScreen from '../components/screens/Laptop'
+import ProjectsScreen from '../components/screens/Projects'
 import {
   ArivaleJobText,
+  EducationText,
   InternshipsText,
   KaimoJobText,
   LandingText,
+  ProjectsText,
 } from '../shared/content'
 
 const styles = require('./index.module.scss')
@@ -43,6 +47,8 @@ export default class IndexPage extends PureComponent {
         />
         <LaptopScreen screenshots={kaimoWebScreenshots} />
         <InternshipsScreen internships={InternshipsText} />
+        <EducationScreen {...EducationText} />
+        <ProjectsScreen projects={ProjectsText} />
       </div>
     )
   }

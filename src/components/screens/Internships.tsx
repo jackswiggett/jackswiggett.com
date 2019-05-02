@@ -1,17 +1,17 @@
 import React, { PureComponent } from 'react'
 import { MdChevronRight } from 'react-icons/md'
-import { IInternship } from '../../shared/types'
+import { IInternshipText } from '../../shared/types'
 import Modal from '../common/Modal'
 import Section from '../common/Section'
 
 const styles = require('./Internships.module.scss')
 
 interface IInternshipsProps {
-  internships: IInternship[]
+  internships: IInternshipText[]
 }
 
 interface IInternshipsState {
-  selectedInternship?: IInternship
+  selectedInternship?: IInternshipText
 }
 
 export default class Internships extends PureComponent<
@@ -23,7 +23,7 @@ export default class Internships extends PureComponent<
   private clearSelectedInternship = () =>
     this.setState({ selectedInternship: undefined })
 
-  private renderInternship = (internship: IInternship, index) => (
+  private renderInternship = (internship: IInternshipText, index) => (
     <div
       key={index}
       className={styles.internship}
@@ -38,7 +38,7 @@ export default class Internships extends PureComponent<
           <span className={styles.role}>{internship.role}</span>
         </div>
       </div>
-      <MdChevronRight size={36} />
+      <MdChevronRight className={styles.chevron} size={36} />
     </div>
   )
 

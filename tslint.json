@@ -6,6 +6,7 @@
     "no-var-requires": false,
     "no-submodule-imports": false,
     "member-access": [true, "no-public"],
-    "member-ordering": false
+    "member-ordering": false,
+    "no-empty-interface": false
   }
 }
