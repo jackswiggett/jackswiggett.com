@@ -62,7 +62,11 @@ export default class Landing extends PureComponent<ILandingProps> {
     const { title, subtitle } = this.props
 
     return (
-      <Section className={styles.root} rootRef={this.rootRef}>
+      <Section
+        className={styles.root}
+        rootRef={this.rootRef}
+        unpinAfterDuration="100%"
+      >
         <div className={styles.inner} ref={this.innerRef}>
           <ProfileImage />
           <div className={styles.titles}>

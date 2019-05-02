@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   color: $color-dark-blue;
+  z-index: 1;
 }
 
 .background {
@@ -28,7 +29,7 @@
   max-height: 100vh;
   overflow: scroll;
   margin: 30px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .closeButton {

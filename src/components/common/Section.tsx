@@ -9,7 +9,7 @@ interface ISectionProps {
   style?: React.CSSProperties
   rootRef?: React.RefObject<HTMLDivElement>
   isPinned?: boolean
-  unpinAfterDuration?: number
+  unpinAfterDuration?: number | string
 }
 
 export default class Section extends PureComponent<ISectionProps> {
