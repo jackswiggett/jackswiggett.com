@@ -15,13 +15,10 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Muli`,
-            variants: [`200`, `300`],
-          },
+          `muli\:200,300`
         ],
       },
     },
