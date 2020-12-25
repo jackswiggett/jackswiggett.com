@@ -1,0 +1,26 @@
+name: Build and Deploy
+on: [push]
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Yarn Install
+      run: |
+        yarn install
+    - name: Build
+      run: |
+        yarn build
+    - name: Deploy to Firebase
+      if: github.ref == 'refs/heads/master'
+      uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
