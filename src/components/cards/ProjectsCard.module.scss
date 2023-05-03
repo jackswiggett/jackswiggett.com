@@ -1,0 +1,36 @@
+@use '../../styles/theme';
+
+.content {
+  padding: 20px 20px 0;
+}
+
+.flippedContent {
+  @include theme.card-flipped-content;
+
+  h3 {
+    margin: 60px 0 7px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 5px;
+
+    @media (min-width: theme.$breakpoint-sm) {
+      font-size: 1.125rem;
+    }
+  }
+
+  a:not(:first-child) {
+    margin-left: 15px;
+  }
+
+  .technologies {
+    font-style: italic;
+  }
+
+  ul {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-left: 22px;
+  }
+}

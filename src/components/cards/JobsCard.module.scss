@@ -1,0 +1,43 @@
+@use '../../styles/theme';
+
+.content {
+  padding: 20px 20px 0;
+}
+
+.flippedContent {
+  @include theme.card-flipped-content;
+
+  .headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    margin: 60px 0 2px;
+  }
+
+  .location,
+  .title,
+  .dates {
+    @media (min-width: theme.$breakpoint-sm) {
+      font-size: 1.125rem;
+    }
+  }
+
+  .location {
+    font-style: italic;
+  }
+
+  .dates {
+    margin-left: 10px;
+    flex: none;
+  }
+
+  ul {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-left: 22px;
+  }
+}

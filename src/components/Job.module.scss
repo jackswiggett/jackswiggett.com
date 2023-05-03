@@ -1,0 +1,101 @@
+@use '../styles/theme';
+
+$role-timeline-marker-color: #8c9db0;
+
+.root {
+  margin-bottom: 25px;
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+}
+
+.leftColumn {
+  width: 50px;
+  margin-right: 15px;
+  flex: none;
+
+  img {
+    width: 100%;
+  }
+}
+
+.middleColumn {
+  flex: auto;
+
+  .role {
+    margin-bottom: 7px;
+
+    .title {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0.2rem;
+
+      @media (min-width: theme.$breakpoint-sm) {
+        font-size: 1.125rem;
+      }
+    }
+
+    .dates {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.rightColumn {
+  width: 50px;
+  height: 50px;
+  flex: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.root:not(.multipleRoles) {
+  .middleColumn h3 {
+    margin: -4px 0 5px;
+  }
+}
+
+.root.multipleRoles {
+  .middleColumn h3 {
+    height: 50px;
+    margin: 0 0 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .roleTimelineMarker {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    $bullet-margin-top: 0.35rem;
+
+    .bullet {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      background-color: $role-timeline-marker-color;
+      border-radius: 5px;
+      margin-top: $bullet-margin-top;
+    }
+
+    .line {
+      position: absolute;
+      top: calc($bullet-margin-top + 19px);
+      bottom: calc(9px - $bullet-margin-top);
+      left: calc(50% - 1px);
+      width: 2px;
+      border-radius: 1px;
+      background-color: $role-timeline-marker-color;
+    }
+  }
+
+  .row:last-child .roleTimelineMarker .line {
+    display: none;
+  }
+}

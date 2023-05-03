@@ -1,0 +1,21 @@
+@use '../../styles/theme';
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 23px;
+  padding-bottom: 20px;
+
+  a {
+    text-align: center;
+    text-decoration: none;
+
+    svg {
+      margin-bottom: 3px;
+    }
+
+    &:hover {
+      color: theme.$color-bright-blue-hover;
+    }
+  }
+}

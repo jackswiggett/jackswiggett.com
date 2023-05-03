@@ -1,57 +1,26 @@
-import React, { PureComponent } from 'react'
-import DocumentHead from '../components/common/DocumentHead'
-import Footer from '../components/common/Footer'
-import EducationScreen from '../components/screens/Education'
-import InternshipsScreen from '../components/screens/Internships'
-import JobScreen from '../components/screens/Job'
-import LandingScreen from '../components/screens/Landing'
-import LaptopScreen from '../components/screens/Laptop'
-import ProjectsScreen from '../components/screens/Projects'
-import {
-  ArivaleJobText,
-  EducationText,
-  InternshipsText,
-  KaimoJobText,
-  LandingText,
-  ProjectsText,
-} from '../shared/content'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useLayoutEffect } from 'react';
+import type { HeadFC, PageProps } from 'gatsby';
+import MainSection from '../components/sections/MainSection';
+import WelcomeSection from '../components/sections/WelcomeSection';
 
-const styles = require('./index.module.scss')
+gsap.registerPlugin(ScrollTrigger);
 
-const variables = require('../styles/variables')
-const arivaleScreenshots = [1, 2, 3, 4, 5].map(num =>
-  require(`../images/arivale_screen_${num}.png`)
-)
-const kaimoMobileScreenshots = [1, 2, 3, 4, 5].map(num =>
-  require(`../images/kaimo_mobile_screen_${num}.png`)
-)
-const kaimoWebScreenshots = [1, 2, 3, 4, 5].map(num =>
-  require(`../images/kaimo_web_screen_${num}.png`)
-)
+const IndexPage: React.FC<PageProps> = () => {
+  // Initialize MailtoUI: https://mailtoui.com/
+  useLayoutEffect(() => {
+    require('mailtoui/dist/mailtoui-min.js').run();
+  }, []);
 
-export default class IndexPage extends PureComponent {
-  render() {
-    return (
-      <div className={styles.root}>
-        <DocumentHead />
-        <LandingScreen {...LandingText} />
-        <JobScreen
-          {...ArivaleJobText}
-          backgroundColor={variables.colorDarkBlue}
-          screenshots={arivaleScreenshots}
-        />
-        <JobScreen
-          {...KaimoJobText}
-          backgroundColor={variables.colorMediumBlue}
-          screenshots={kaimoMobileScreenshots}
-          flexReverse={true}
-        />
-        <LaptopScreen screenshots={kaimoWebScreenshots} />
-        <InternshipsScreen internships={InternshipsText} />
-        <EducationScreen {...EducationText} />
-        <ProjectsScreen projects={ProjectsText} />
-        <Footer />
-      </div>
-    )
-  }
-}
+  return (
+    <div>
+      <WelcomeSection />
+      <MainSection />
+    </div>
+  );
+};
+
+export default IndexPage;
+
+export const Head: HeadFC = () => <title>Jack Swiggett</title>;

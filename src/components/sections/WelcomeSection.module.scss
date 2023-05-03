@@ -1,0 +1,165 @@
+@use '../../styles/theme';
+
+:export {
+  breakpointMd: theme.$breakpoint-md;
+}
+
+.spacer {
+  height: 100vh;
+  z-index: -1;
+  position: relative;
+}
+
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+
+  // Let the GSAP animation unhide this to avoid it flashing before JS loads
+  visibility: hidden;
+}
+
+.displaySmall {
+  @media (min-width: theme.$breakpoint-md) {
+    display: none;
+  }
+}
+
+.displayMedium {
+  display: none;
+
+  @media (min-width: theme.$breakpoint-md) {
+    display: initial;
+  }
+}
+
+.blueCircle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: max(150vw, 150vh);
+  height: max(150vw, 150vh);
+  border-bottom-right-radius: max(150vw, 150vh);
+  transform-origin: top left;
+  background-color: theme.$color-bg;
+  z-index: -1;
+
+  // Not needed on larger screens since the background starts out blue (see index.scss)
+  @media (min-width: theme.$breakpoint-md) {
+    display: none;
+  }
+}
+
+.topContainer {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+
+  @media (min-width: theme.$breakpoint-md) {
+    flex-direction: row;
+  }
+}
+
+.bottomContainer {
+  flex: none;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.profileImage {
+  width: 150px;
+  height: 150px;
+  border: 6px solid white;
+
+  @include theme.card-shadow;
+
+  @media (min-width: theme.$breakpoint-md) {
+    width: 180px;
+    height: 180px;
+  }
+
+  @media (min-width: theme.$breakpoint-lg) {
+    width: 240px;
+    height: 240px;
+  }
+
+  @media (min-width: theme.$breakpoint-xl) {
+    width: 275px;
+    height: 275px;
+  }
+}
+
+.mainTextContainer {
+  @media (min-width: theme.$breakpoint-md) {
+    // Styles needed for the text animation
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.mainText {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 1.8em;
+
+  @media (min-width: 400px) {
+    font-size: 25px;
+  }
+
+  @media (min-width: theme.$breakpoint-md) {
+    text-align: left;
+    margin-top: 0;
+    margin-left: 44px;
+  }
+  @media (min-width: theme.$breakpoint-lg) {
+    font-size: 35px;
+    margin-left: 53px;
+  }
+
+  @media (min-width: theme.$breakpoint-xl) {
+    font-size: 40px;
+    margin-left: 60px;
+  }
+
+  h1 {
+    font-size: 2.3em;
+    font-weight: 200;
+    margin: 0;
+    margin-bottom: 0.5em;
+
+    @media (min-width: theme.$breakpoint-md) {
+      margin-top: -0.15em;
+      margin-bottom: 0.25em;
+    }
+
+    strong {
+      font-weight: 400;
+    }
+  }
+
+  p {
+    margin: 0 0 15px;
+  }
+}
+
+.scrollMessage {
+  margin-bottom: 9px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+
+  @media (min-width: theme.$breakpoint-md) {
+    font-size: 1rem;
+  }
+}

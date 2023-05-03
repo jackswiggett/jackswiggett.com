@@ -1,0 +1,17 @@
+@use '../styles/theme';
+
+.root {
+  padding: 0;
+  border: none;
+  background: none;
+  color: theme.$color-bright-blue;
+  cursor: pointer;
+
+  &:hover {
+    color: theme.$color-bright-blue-hover;
+  }
+
+  svg {
+    display: block;
+  }
+}

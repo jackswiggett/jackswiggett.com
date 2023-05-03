@@ -1,0 +1,66 @@
+@use '../styles/theme';
+
+.contentWrapper {
+  overflow: hidden;
+  height: 0;
+}
+
+.expanded {
+  .contentWrapper {
+    height: 200px;
+  }
+}
+
+.toggleButton {
+  display: block;
+  margin: auto;
+  border: none;
+  background: none;
+  padding: 0;
+  color: theme.$color-bright-blue;
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+  margin-bottom: 12px;
+  position: relative;
+
+  &:hover {
+    color: theme.$color-bright-blue-hover;
+  }
+
+  .viewMoreText,
+  .hideText {
+    display: block;
+    transition: opacity 0.2s;
+  }
+
+  .hideText {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  svg {
+    margin-top: 6px;
+    transition: transform 0.4s;
+    transition-delay: 0.5s; // wait for the content to expand/collapse
+  }
+}
+
+.expanded .toggleButton {
+  .viewMoreText {
+    opacity: 0;
+  }
+
+  .hideText {
+    opacity: 1;
+  }
+
+  svg {
+    transform: rotate(-0.5turn);
+  }
+}

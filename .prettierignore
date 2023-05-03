@@ -1,0 +1,5 @@
+.cache
+public
+package-lock.json
+src/gatsby-types.d.ts
+tsconfig.json

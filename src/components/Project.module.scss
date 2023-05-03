@@ -1,0 +1,45 @@
+@use '../styles/theme';
+
+.root {
+  margin-bottom: 25px;
+  display: flex;
+}
+
+.leftColumn {
+  flex: none;
+  margin-right: 15px;
+
+  img {
+    width: 30px;
+  }
+}
+
+.middleColumn {
+  flex: auto;
+
+  h3 {
+    margin: -0.1em 0 10px;
+
+    .inProgressText {
+      font-size: 0.875rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+  }
+
+  p {
+    margin: 0;
+
+    a {
+      font-weight: 500;
+      display: inline-block;
+    }
+  }
+}
+
+.rightColumn {
+  width: 50px;
+  text-align: right;
+  flex: none;
+}

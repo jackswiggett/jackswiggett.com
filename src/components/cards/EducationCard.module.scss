@@ -1,0 +1,47 @@
+@use '../../styles/theme';
+
+.content {
+  padding: 20px;
+}
+
+.topSection {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 28px;
+
+  img {
+    margin-top: 10px;
+    margin-right: 15px;
+    width: 50px;
+  }
+}
+
+.textContainer {
+  font-size: 1.125rem;
+
+  h3 {
+    margin: 0 0 5px;
+  }
+
+  div {
+    margin-top: 3px;
+  }
+}
+
+.bottomSection {
+  h4 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-top: 10px;
+    }
+  }
+}
