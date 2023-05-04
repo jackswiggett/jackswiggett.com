@@ -16,7 +16,7 @@ const WelcomeSection: React.FC = () => {
       const matchMedia = gsap.matchMedia();
 
       // For small screens
-      matchMedia.add(`not (min-width: ${styles.breakpointMd})`, () => {
+      matchMedia.add(`not all and (min-width: ${styles.breakpointMd})`, () => {
         welcomeAnimationTimeline.from(
           `.${styles.profileImage}`,
           {
@@ -48,7 +48,7 @@ const WelcomeSection: React.FC = () => {
         welcomeAnimationTimeline.from(
           `.${styles.profileImage}`,
           {
-            y: '-100vh', // TODO: calculate in JS similar to small screen animation
+            y: '-100vh',
             ease: 'power2.out',
             duration: 1,
             rotation: -90,
@@ -75,15 +75,19 @@ const WelcomeSection: React.FC = () => {
         // Once the animation is done, revert all effects of GSAP. Otherwise, the layout can get
         // wonky when the screen is resized.
         matchMedia.revert();
+
+        // Also make the background of the root HTML element blue to prevent the white background
+        // from showing up sometimes when scrolling (particularly in mobile Safari)
+        document.documentElement.classList.add('afterWelcomeAnimation');
       });
 
-      // Hide the "Scroll Down" text, otherwise it becomes visible when you overscroll past the
+      // Hide the text after scrolling, otherwise it becomes visible when you overscroll past the
       // bottom of the main section
-      gsap.to(`.${styles.bottomContainer}`, {
+      gsap.to(`.${styles.content}`, {
         visibility: 'hidden',
         scrollTrigger: {
           trigger: `.${styles.spacer}`,
-          start: 'bottom top',
+          start: 'bottom -50px',
           scrub: true,
         },
       });
