@@ -19,7 +19,7 @@
 
 .content {
   background-color: theme.$color-bg;
-  padding: 150px 15px 20px;
+  padding: 150px 15px 0;
 
   // Show one column (i.e. stack the columns) on medium/small screens.
   display: flex;
@@ -38,4 +38,15 @@
   width: 520px;
   max-width: 100%;
   margin: 0 30px;
+}
+
+.footer {
+  text-align: center;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  color: white;
+
+  a {
+    color: white;
+  }
 }
