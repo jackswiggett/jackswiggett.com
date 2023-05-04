@@ -9,6 +9,10 @@ html {
   @media (min-width: theme.$breakpoint-md) {
     background-color: theme.$color-bg;
   }
+
+  &.afterWelcomeAnimation {
+    background-color: theme.$color-bg;
+  }
 }
 
 .mailtoui-no-scroll {

@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react';
 import { BsXLg } from 'react-icons/bs';
+import { useWindowSize } from 'react-use';
 import * as styles from './Card.module.scss';
 
 interface Props {
@@ -115,12 +116,12 @@ const Card: React.FC<React.PropsWithChildren<Props>> = ({
       top: 0,
       left: 0,
       width: '100vw',
-      height: '100vh',
+      height: window.innerHeight,
     });
 
     timeline.set(cardRef.current, {
       width: '100%',
-      height: '100%',
+      height: window.innerHeight,
       ...(flipped ? cardUnflippedAttributes : cardFlippedAttributes),
     });
 
@@ -153,6 +154,10 @@ const Card: React.FC<React.PropsWithChildren<Props>> = ({
     }
   }, [flipped]);
 
+  // We cannot use 100vh because in mobile browsers this may be larger than the actual visible
+  // viewport, causing content to be cut off. So we do this instead.
+  const windowSize = useWindowSize();
+
   return (
     <div className={styles.root} ref={rootRef}>
       <div className={styles.cardContainer} ref={cardContainerRef}>
@@ -161,7 +166,7 @@ const Card: React.FC<React.PropsWithChildren<Props>> = ({
             <h2>{title}</h2>
             {children}
           </div>
-          <div className={styles.cardBack} ref={cardBackRef}>
+          <div className={styles.cardBack} style={{ height: windowSize.height }} ref={cardBackRef}>
             <button className={styles.unflipButton} onClick={unflip}>
               <BsXLg />
             </button>
