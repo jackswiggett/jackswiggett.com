@@ -25,6 +25,18 @@ const MainSection: React.FC = () => {
           <ContactCard />
         </div>
       </div>
+      <p className={styles.footer}>
+        &copy; {new Date().getFullYear()} Jack Swiggett. Check out the source
+        code for this website on{' '}
+        <a
+          href="https://github.com/jackswiggett/jackswiggett.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        .
+      </p>
     </div>
   );
 };

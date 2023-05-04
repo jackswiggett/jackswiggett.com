@@ -166,7 +166,11 @@ const Card: React.FC<React.PropsWithChildren<Props>> = ({
             <h2>{title}</h2>
             {children}
           </div>
-          <div className={styles.cardBack} style={{ height: windowSize.height }} ref={cardBackRef}>
+          <div
+            className={styles.cardBack}
+            style={{ height: windowSize.height }}
+            ref={cardBackRef}
+          >
             <button className={styles.unflipButton} onClick={unflip}>
               <BsXLg />
             </button>
