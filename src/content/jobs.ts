@@ -3,7 +3,6 @@ import arivaleLogo from '../images/logos/arivale.png';
 import breakoutMentorsLogo from '../images/logos/breakout_mentors.jpg';
 import harmonyCloudLogo from '../images/logos/harmony_cloud.png';
 import inevalLogo from '../images/logos/ineval.png';
-import isepLogo from '../images/logos/isep.png';
 import kaimoLogo from '../images/logos/kaimo.png';
 import loftiumLogo from '../images/logos/loftium.png';
 import synapseLogo from '../images/logos/synapse.jpg';
@@ -73,7 +72,7 @@ const jobs: Array<Job> = [
     location: 'Stanford, CA; Seattle WA',
     roles: [{ title: 'Co-Founder', start: 'Oct 2017', end: 'Dec 2018' }],
     bullets: [
-      'Built and deployed a scalable web application from the ground up using Node.js, React, React Native, and MongoDB',
+      'Built and deployed a scalable web application from the ground up using Node.js, React, React Native, and MySQL',
       'Designed and tested extensive UI mockups and prototypes, and shipped frontends for browser, iOS and Android',
     ],
   },
