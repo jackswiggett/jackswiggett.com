@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react';
 import { BsXLg } from 'react-icons/bs';
-import { useWindowSize } from 'react-use';
+import useWindowSize from '../utils/useWindowSize';
 import * as styles from './Card.module.scss';
 
 interface Props {
