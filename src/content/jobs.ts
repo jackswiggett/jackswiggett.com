@@ -32,9 +32,10 @@ const jobs: Array<Job> = [
       { title: 'Software Engineer', start: 'Aug 2019', end: 'Oct 2020' },
     ],
     bullets: [
-      'Led the growth of the engineering team from 2 to 6 engineers, overseeing the successful launch of a new mobile app, integrations with Airbnb and Vrbo, a brand new Host to Own product, and much more',
-      'Contributed extensively to all parts of our React/Rails codebase, owning critical features like our short term rental pricing strategy and payment handling',
-      'Ran sprint plannings, conducted 1-on-1s with direct reports, and introduced tech talks, pair programming, and other initiatives to help the team learn and grow',
+      'Led the growth of the engineering team from 2 to 6 engineers, overseeing the launch of a new React Native app, real-time booking and messaging integrations with Airbnb and Vrbo, a brand new Host to Own product, and much more',
+      'Owned critical features of our React/Rails codebase, including our pricing strategy and payment handling for over 20,000 reservations annually',
+      'Ran sprint planning, team strategy meetings, company-wide engineering demos, and 1-on-1s with direct reports',
+      'Introduced initiatives like tech talks and pair programming to help the team learn and grow',
     ],
   },
   {
@@ -51,7 +52,7 @@ const jobs: Array<Job> = [
     ],
     bullets: [
       'Rebuilt the popular Harmony Cloud app in React Native to run cross-platform, employing an Objective-C/Java bridge to access shared algorithms written in C++',
-      'Designed high-fidelity Figma mockups for every feature of the revamped app based on requirements from the founders',
+      'Designed over 50 high-fidelity Figma mockups for every feature of the revamped app based on requirements from the founders',
     ],
   },
   {
@@ -61,8 +62,8 @@ const jobs: Array<Job> = [
     location: 'Seattle, WA',
     roles: [{ title: 'Software Engineer', start: 'Jan', end: 'Apr 2019' }],
     bullets: [
-      'Spearheaded numerous improvements to our React Native app architecture, leveling up performance, stability, and user experience',
-      'Owned frontend development of a new app for rapidly delivering customized health insights at low cost',
+      'Owned development of a new app for rapidly delivering health insights to users based on interactive questionnaires and demographic data',
+      'Spearheaded numerous improvements to our React Native architecture which reduced instability and improved performance, user experience, and maintainability',
     ],
   },
   {
@@ -72,8 +73,9 @@ const jobs: Array<Job> = [
     location: 'Stanford, CA; Seattle WA',
     roles: [{ title: 'Co-Founder', start: 'Oct 2017', end: 'Dec 2018' }],
     bullets: [
-      'Built and deployed a scalable web application from the ground up using Node.js, React, React Native, and MySQL',
-      'Designed and tested extensive UI mockups and prototypes, and shipped frontends for browser, iOS and Android',
+      'Built and deployed a scalable web application from the ground up, allowing users to track, visualize, and analyze health data to better manage chronic conditions',
+      'Designed extensive prototypes and shipped frontends for browser, iOS and Android',
+      'Worked with Node.js, React, React Native, MySQL, and Google Cloud Platform',
     ],
   },
   {
@@ -142,7 +144,8 @@ const jobs: Array<Job> = [
       },
     ],
     bullets: [
-      'Taught students ages 9-13 weekly, one-on-one, self-guided lessons in Java and Scratch, tailored to their individual interests and needs',
+      'Taught students ages 9-13 weekly one-on-one lessons in Java and Scratch',
+      "Tailored curricula to the students' individual interests and needs",
     ],
   },
 ];
